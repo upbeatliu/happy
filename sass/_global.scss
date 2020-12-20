@@ -1,0 +1,153 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, p, a {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-weight: 500;
+}
+h2 {
+  font-weight: 700;
+  color: $happy-h2-title;
+}
+h3 {
+  font-weight: 500;
+}
+h4 {
+  font-weight: 400;
+}
+.container {
+  width: 1400px;
+}
+.navbar-brand img {
+  max-width: 150px;
+  width: 100%;
+}
+
+nav ul  li {
+  margin-right: 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    font-weight: 500;
+  }
+}
+.navbar-static-top {
+  background-color: #fff;
+}
+#menu-public-primary-menu { 
+  // Google Reviews image
+  #menu-item-94 a {  
+    background:url('./images/google-reviews.png') 0 0 no-repeat;
+    display:block;
+    margin-top: 6px;
+    height:25px;
+    text-indent:-99999em;
+    width:68px;
+    overflow:hidden;
+  }
+  // Log In
+  #menu-item-95 a::after {
+    content: '|';
+    margin-left: 0.6rem;
+  }
+  #menu-item-96 {
+    margin-left: -1.4rem;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  .navbar-brand a img {
+    max-width: 85px;
+  }
+}
+#header-nav {
+  background-color: $happy-yellow;
+  ul li a {
+    color:#000;
+    &:hover{
+      color: rgba(255, 88, 36, 0.7);
+    }
+  }
+}
+
+.site-footer {
+  background-color: $happy-black;
+  color: #fff;
+  margin-top: 2.5rem;
+  padding: 15px 0;  
+  font-size: 0.9em;
+  position: relative;
+  .go-to {
+    position: absolute;
+    top: -23px;
+    right: 5px;
+    width: min-content;
+    .fa {
+      background-color:$happy-yellow;
+      font-size: 32px;
+      border-radius: 25px;
+      padding: 5px 5px;
+    }
+  }
+  a {
+    color: #fff;
+    &:hover {
+      color: rgba(255,255,255, 0.8);
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    .footer-wrap {
+      width: 33.3%;
+      img.footer-logo {
+        float: right;
+        width: 172px;
+        height: 52px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .footer-links {
+      ul {
+        list-style-type: none;
+        width: max-content;
+        margin: 19px auto 0 auto;
+        padding-left: 0;
+        li {
+          display: inline-block;
+          float: left;
+          line-height: 0.8;
+          padding-right: 15px;
+          padding-left: 15px;
+          border-right: 1px solid #fff;
+          &:last-child {
+            padding-right: 0;
+            border-right: 0;
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          a {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    .copyright {
+      margin-top: 14px;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}

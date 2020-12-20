@@ -1,0 +1,251 @@
+.home #page-sub-header {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  min-height: 486px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .hero-text-wrap {
+    background-color: rgba(0,0,0,.35);
+    text-align: center;
+    margin-top: 20vh;
+    h1 {
+      width: 45vw;
+      color: rgba(255,255,255, .85);
+      margin: 1rem auto 0 auto;
+      letter-spacing: 1.5px;           
+    } 
+    p {
+      display: none;
+    }   
+    a {
+      font-size: 3rem;
+      color: $happy-yellow;
+      &:hover {
+        color: $happy-red;
+      }
+    }
+  }
+}
+.home .section-block {
+  padding: 3rem 0 4rem;
+  h2.section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  h4 {
+    text-align: center;
+    width: 28vw;
+    margin: 2rem auto 4rem;
+    color: $happy-black;
+  }
+}
+.how {
+  background-color: $happy-background;
+  .steps-wrap {  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position: relative;
+    .step-wrap {
+      width: 20%;
+      padding-right: 30px;
+      &:last-of-type{
+        padding-right: 0;
+        .title, p {
+          margin-right: 30px;
+        }
+      }
+      .number {
+        position: absolute;
+        top: 10px;
+        background-color: #fff;      
+        border: 1px solid $happy-red;
+        color: $happy-red;
+        border-radius: 25px;
+        padding: 2px 11px;
+        width: min-content;          
+      }
+      .block-arrow {
+        background-image: url('./images/block-step.png');
+        width: 192px;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;      
+        i.fas {
+          color: $happy-red;
+          font-size: 5rem;             
+        }
+      }
+      .title {      
+        font-size: 22px;
+        margin: 2rem auto 1rem;
+      }  
+      p {
+        background-color: #f7f7f7;
+        padding: 8px 16px;
+        border-radius: 5px;
+      }  
+    }
+  }
+}
+
+.plans {  
+  padding-top: 3rem;
+  h2.woocommerce-loop-product__title span {
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: $happy-red;
+  }
+  .woocommerce.columns-3 ul.products li.product {    
+    margin: 0 1rem 3rem 0;
+    width: 32.35%;
+    &:nth-of-type(3n) {
+      margin: 0 0 2rem 0;
+    }
+  }
+  .woocommerce {
+    ul.products li.product {
+      .onsale {
+        top: 38px;
+        right: 11px;
+        width: 100%;
+        background-color: rgba(0,0,0,0.6);
+        color: #f7e459;
+        font-size: 1.4rem;
+        min-height: 0;
+        min-width: 0;
+        padding: 6px 16px;
+        line-height: 1.2;
+        border-radius: 0;
+      }
+      a {
+        text-align: center;
+        img {
+          border-radius: 12px;
+        }
+      }
+      .price {
+        color: $happy-black;
+      }
+      a.button {
+        background-color: #f7e459;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        margin-top: 4px;
+        border-radius: 10px;
+        &:hover {
+          color: $happy-red;
+        }
+      }
+    } 
+  }  
+}
+
+.latest {
+  background-color: $happy-background;
+  .row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .card-single {
+    background-color: $happy-background;
+    padding-right: 1rem;
+    border: none;
+    width: 25%;
+    &:last-of-type {
+      padding-right: 0;
+    }
+    .card-img {
+      .img-div {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 185px;
+        width: 100%;        
+      }
+      .card-meta {
+        padding: 5px 16px;        
+        .meta-link {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          &:hover {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 1.25rem 12px;
+      background-color: #fff;
+      .card-title {
+        font-size: 24px;
+        .title-link {          
+          color: $happy-black;
+          &:hover {
+            color:$happy-yellow;
+          }
+        }
+      }
+      .read-more {
+        width: 100%;
+        background-color: $happy-yellow;
+        border: none;
+        color: #fff;
+        &:hover {
+          color: $happy-red;
+        }
+      }
+    }
+  }
+}
+
+.help {  
+  padding-top: 3rem;
+  background-image: url('./images/bg-ask-help.gif');
+  background-repeat: repeat-x;
+  background-position: center top;
+  width: 100%;
+  height: auto;
+  display: block;
+  .container-wrap {
+    background-color: #fff;
+    padding: 0;
+    .tab-content {
+      padding: 2rem;
+    }
+    .nav-tabs {
+      .nav-link {
+        background-color: $happy-background;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        h3 {
+          color: $happy-h2-title;
+          &:hover {
+            color: rgba(255, 88, 36, 0.5);
+            background-color: #e8e8e8;
+          }
+        }
+      }
+      .active {
+        background-color: #fff;
+        h3 {
+          color: $happy-red;
+        }
+      }
+    }    
+  }
+  .appointment-wrap {
+    min-height: 612px;
+    .ui-datepicker .ui-datepicker-current-day {
+      background-color: $happy-yellow;
+    }
+  }
+}

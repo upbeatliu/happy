@@ -1,0 +1,87 @@
+.wpcf7-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  .form-control{
+    border-radius: 0;
+  }
+  input, select, textarea {
+    margin: 20px auto;
+  }
+  label {
+    font-weight: 600;
+  }
+  .one_half {
+    width: max-content;
+    width: 48%;  
+  }
+  .full-width {
+    width: 100%;
+  }
+  input[type=text], input[type=email], input[type=tel] {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid $happy-background;
+    &:focus {
+      box-shadow: none;
+      border-color: $happy-yellow;
+      border-radius: 0;
+    }
+  }
+  .btn-primary, 
+  .btn-primary:disabled {
+    border:none;  
+    padding: 8px 5rem;
+    font-weight: 600;
+    color: $happy-black;
+  }
+  .btn-primary {
+    background-color: rgba(247, 248, 89, 0.85);  
+    &:focus, &:hover, &:active {
+      background-color: $happy-yellow;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .btn-primary:disabled {
+    background-color: rgba(247,228,89,0.6);  
+  }
+  textarea.form-control {
+    &:focus {
+      box-shadow: none;
+      border-color: $happy-yellow;
+      border-radius: 0;
+    }
+  }
+}
+
+/**
+* Easy Appointment
+*/
+.ea-bootstrap {  
+  .btn-primary, .btn-default {      
+    padding: 8px 5rem !important;
+    font-weight: 600 !important;
+    color: $happy-black !important;
+    border:none !important;     
+    &:focus, &:hover, &:active {      
+      border: none !important;
+      box-shadow: none !important;      
+    }
+  } 
+  .btn-default {
+    background-color: #e8e8e8 !important;
+    &:focus, &:hover, &:active {
+      background-color: #ccc !important;
+      outline: none !important;
+    }
+  }
+  .btn-primary {
+    background-color: rgba(247, 248, 89, 0.85) !important;    
+    &:focus, &:hover, &:active {
+      background-color: $happy-yellow !important;
+      outline: none !important;
+    }
+  } 
+}
