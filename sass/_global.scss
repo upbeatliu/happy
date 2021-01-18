@@ -36,10 +36,18 @@ nav ul  li {
     font-weight: 500;
   }
 }
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
 .navbar-static-top {
   background-color: #fff;
 }
-#menu-public-primary-menu { 
+ul#menu-public-primary-menu {
+  li a {
+    &:hover {
+      color: $happy-red;
+    }
+  } 
   // Google Reviews image
   #menu-item-94 a {  
     background:url('./images/google-reviews.png') 0 0 no-repeat;
@@ -49,14 +57,22 @@ nav ul  li {
     text-indent:-99999em;
     width:68px;
     overflow:hidden;
+    &:hover {
+      opacity: 0.8;
+    }
   }
-  // Log In
-  #menu-item-95 a::after {
-    content: '|';
-    margin-left: 0.6rem;
-  }
-  #menu-item-96 {
-    margin-left: -1.4rem;
+  // Profile / Logout / Log In /Register
+  li.custom-menu-item {
+    margin-top: 6px;
+    a {
+      color: rgba(0,0,0,.5);
+      text-transform: uppercase;
+      &:hover {
+        color: $happy-red;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
   }
 }
 .sticky {
@@ -150,4 +166,9 @@ nav ul  li {
       }
     }
   }
+}
+
+/** Packages page **/
+.page-template-tpl_package .section-block {
+  padding: 3rem 0 4rem;
 }

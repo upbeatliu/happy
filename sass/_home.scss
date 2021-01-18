@@ -137,7 +137,7 @@
         width: 100%;
         text-align: center;
         margin-top: 4px;
-        border-radius: 10px;
+        border-radius: 0.25rem;
         &:hover {
           color: $happy-red;
         }
@@ -244,8 +244,12 @@
   }
   .appointment-wrap {
     min-height: 612px;
-    .ui-datepicker .ui-datepicker-current-day {
-      background-color: $happy-yellow;
+    .ui-datepicker {
+      box-shadow: none;
+      border-color: $happy-yellow;
+      .ui-datepicker-current-day {
+        background-color: $happy-yellow;
+      }
     }
   }
 }

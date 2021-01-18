@@ -1,0 +1,237 @@
+.myaccount-wrap {
+  padding: 35px 0;  
+  h2.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .woocommerce {        
+    .woocommerce-MyAccount-navigation {
+      width: 100%;
+      ul {
+        background-color:$happy-black;
+        padding-left: 0;
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        li {
+          padding: 8px 12px;
+          &:nth-of-type(3) {
+            display: none;
+          }         
+          &:last-of-type {
+            margin-right: 1rem;
+          }          
+          a {
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            &:hover {
+              color: $happy-yellow;
+              text-decoration: none;              
+            }
+          }          
+        }
+        .is-active {
+          background-color: #fff;          
+          border-bottom: 1px solid $happy-black;
+          border-top: 1px solid $happy-black;
+          a {
+            color: $happy-black;
+          }          
+        }
+      }
+    }
+    .woocommerce-MyAccount-content {
+      width: 100%;
+      padding: 3rem 0 0 0;
+      a {
+        color: rgba(255,88,36, 0.7);      
+        &:hover {
+          color: $happy-red;
+          text-decoration: none;
+        }
+      }
+    }
+    /** Dashboard & Business Info **/
+    .dashboard-wrap {
+      position: relative;
+      margin-top: 4rem;
+      .row {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .row1 {
+        .col {
+          background-color: rgba(247,248,89,.2);
+          border: 1px solid #f7e459;
+          padding: 6px;        
+        }
+        .col03 { flex-grow:1; } 
+      }
+      .row2 .updated {
+        position: absolute;
+        top: -56px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid $happy-yellow;
+        background-color: #f7f7f7; 
+        p {
+          position: relative;
+          margin: auto;
+          width: max-content;
+          &:before {
+            color: $happy-yellow;
+            font-family: WooCommerce;
+            content: "\e015";
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: -28px;
+          }
+        }
+      }
+    }
+    #acf-my-account .acf-fields,
+    #acf-my-business .acf-fields {
+      display: flex;
+      max-width: 100%;
+      flex-flow: row wrap;
+      .acf-input {        
+        padding: 10px 4px 10px 3px;        
+        margin-bottom: 10px;
+        border-left: 1px solid $happy-yellow;
+        border-bottom: 1px solid $happy-yellow;
+        &:nth-of-type(6) {
+          margin-right: 0;
+          border-right: 1px solid $happy-yellow;          
+        }
+        &:last-of-type { // using td mode of field_el error to show email field
+          display: none;
+        }
+
+        textarea { // hosting, admin details
+          margin: 0px 9px 0 10px;        
+        }
+        .acf-checkbox-list { //status
+          list-style: none;
+          margin-right: 13px;
+          padding-left: 2px;
+        }      
+        &:nth-of-type(5){
+          padding-right: 12px;
+        }
+        &:nth-of-type(6) {
+          margin-right: 0;
+          border-right: 1px solid $happy-yellow;       
+        }
+      }
+        
+    }
+    #acf-my-business .acf-fields .acf-input {
+      &:nth-of-type(5){
+        padding-right: 2px;
+      }
+    }
+    .acf-my-business .row2 .updated {
+      display: none;
+    }
+    .acf-form-submit .acf-button {
+      background-color: $happy-yellow;
+      padding: 10px;
+      color: #fff;
+      width: 27%;
+      margin: 10px auto 0 auto;
+      display: block;
+      &:hover {
+        background-color: $happy-yellow;
+        color: $happy-red;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    /** Orders **/  
+    .woocommerce-orders-table {
+      thead {
+        background-color: #e8e8e8;
+      }
+      .woocommerce-orders-table__cell-order-actions {
+        .woocommerce-button {
+          margin-right: 10px;
+          background-color: rgba(247, 248, 89, 0.2);
+        }
+      }
+    }
+  }
+}
+.woocommerce .form-control:focus {
+  border-color: $happy-yellow;
+  box-shadow: none;
+}
+.woocommerce-message {
+  border-top-color: $happy-yellow;
+  background-color:rgba(247, 248, 89, 0.3);
+  &:before {
+    color: $happy-red;
+  }
+}
+.woocommerce-address-fields__field-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+  .form-row {
+    width: 50%;
+  }
+}
+.woocommerce-Button, 
+.woocommerce-button, 
+.woocommerce-address-fields button {
+  border:none;  
+  padding: 8px 5rem;
+  font-weight: 600;
+  width: 100%;
+  color: $happy-black;    
+  &:focus, &:hover, &:active {    
+    border: none;
+    box-shadow: none;
+  }
+}
+.woocommerce-Button {
+  background-color: rgba(247, 248, 89, 0.85);  
+  &:focus, &:hover, &:active {
+    background-color: $happy-yellow;
+  }
+}
+.woocommerce-button,
+.woocommerce-address-fields button {
+  background-color: #ccc;
+  &:focus, &:hover, &:active {
+    background-color: #eee;
+  }
+}
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea, 
+.woocommerce form .form-row .select2-container {
+  margin: 0 0 0 10px;
+}
+.woocommerce form .form-row .select2-container {
+  width: 200% !important;
+}
+.select2-container--default .select2-selection--single {
+  height: 36px;
+}
+.woocommerce-MyAccount-content {
+  .woocommerce-info {
+    border-top-color: $happy-yellow;
+    background-color: #f7f7f7
+    &::before {
+      color: $happy-red;
+    }
+  }
+}
+.woocommerce button.button.alt {
+  background-color: $happy-yellow;
+}

@@ -322,3 +322,40 @@ function woocommerce_custom_sale_text($text, $post, $_product)
     return '<span class="onsale">SALE</span>';
 }
 
+/**
+ * change related products position into tabs
+ */
+
+// First, let's remove related products from their original position 
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+ 
+// Second, let's add a new tab 
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+ 
+function woo_new_product_tab( $tabs ) {
+    
+$tabs['related_products'] = array(
+   'title'    => __( 'Related Plans', 'woocommerce' ),
+   'priority'    => 50,
+   'callback'    => 'woo_new_product_tab_content'
+);
+   return $tabs;
+}
+ 
+// Third, let's put the related products inside 
+function woo_new_product_tab_content() {
+    woocommerce_output_related_products();
+}
+
+/**
+ * ACF
+ */
+add_action( 'admin_post_adaptiveweb_save_profile_form', 'adaptiveweb_save_profile_form' );
+function adaptiveweb_save_profile_form() {
+  if(!isset($_REQUEST['user_id'])) return;
+
+  do_action('acf/save_post', $_REQUEST['user_id']);
+
+  wp_redirect(add_query_arg('updated', 'success', wp_get_referer()));
+  exit;
+}

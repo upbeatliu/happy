@@ -14,7 +14,7 @@
 
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?>" role="contentinfo">
 	<div class="go-to">
-		<a href="#page-sub-header"><i class="fa fa-fw fa fa-fw fa-angle-up"></i></a>
+		<a href="#page"><i class="fa fa-fw fa fa-fw fa-angle-up"></i></a>
 	</div>
 		<div class="container footer-container pt-3 pb-3">
 			<!-- left -->
@@ -57,6 +57,67 @@
 	</footer><!-- #colophon -->
 <?php endif; ?>
 </div><!-- #page -->
+
+<!-- login and forgot password forms -->
+<div class="modal fade" id="happyModallogin" tabindex="-1" role="dialog" aria-labelledby="happyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="tab-content">
+			<!-- Log In Page -->
+			<div id="login" class="modal-content tab-pane footer-modal active">
+			
+				<div class="modal-body login-body">
+					<?php echo do_shortcode('[wppb-login]'); ?>
+				</div>
+					<a class="forgot-pw" data-toggle="tab" href="#reset">Forgot Password?</a>
+			</div>
+
+			<!-- Reset Password Page -->
+			<div id="reset" class="modal-content tab-pane fade footer-modal">
+				
+				<div class="modal-body">
+					<?php echo do_shortcode('[wppb-recover-password]'); ?>
+				</div>
+				<a class="back-signin" data-toggle="tab" href="#login">Back to Sign In</a>
+			</div>
+		</div>
+	</div>
+</div> <!-- end of modal login div -->
+
+<!-- register forms-->
+<div class="modal fade" id="happyModalregister" tabindex="-1" role="dialog" aria-labelledby="happyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+
+		<div class="tab-content register-wrap">
+			<div id="register" class="modal-content tab-pane footer-modal active">		      
+				<div class="modal-body register-body">
+					<?php echo do_shortcode('[wppb-register]'); ?>
+				</div>		     
+			</div>
+		</div>		
+	</div>
+</div>
+<!-- end of register modal -->
+
+<!-- logout forms-->
+<div class="modal fade" id="happyModallogout" tabindex="-1" role="dialog" aria-labelledby="happyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+
+		<div class="tab-content logout-wrap">
+			<div id="logout" class="modal-content tab-pane footer-modal active">		      
+				<div class="modal-body logout-body">
+					<?php echo do_shortcode('[wppb-logout]'); ?>
+				</div>		     
+			</div>			
+		</div>
+	</div>
+</div>
+<!-- end of register modal -->
 
 <?php wp_footer(); ?>
 </body>

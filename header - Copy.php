@@ -34,7 +34,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
-        <div class="container primary-wrap"> <!-- header menu -->       
+        <div class="container primary-wrap">        
             <nav class="navbar navbar-expand-xl p-0">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
@@ -50,44 +50,28 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-center">
-			      	<ul id="menu-public-primary-menu" class="nav navbar-nav navbar-right">
-
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
-                'container'       => 'false',                
+                'container'       => 'div',
+                'container_id'    => 'main-nav',
+                'container_class' => 'collapse navbar-collapse justify-content-center',
+                'menu_id'         => false,
+                'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker(),
-                'items_wrap'	  => '%3$s'
+                'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
-                <li itemscope="itemscope" class="menu-item custom-menu-item">
-                    <?php
-                        $classes = get_body_class();
-                        if (in_array('logged-in',$classes)) {
-                    ?>
-                        <a href="/happy/my-account">Profile</a>
-                        <span> | </span>
-                        <a class="logout" data-toggle="modal" data-target="#happyModallogout">Log out</a>
-                    
-                    <?php } else { ?>
-                        <a class="login" data-toggle="modal" data-target="#happyModallogin">Log in</a>
-                        <span> | </span>
-                        <a class="register" data-toggle="modal" data-target="#happyModalregister">Register</a>
-                    <?php } ?>
-                </li>
             </nav>            
         </div>
-
         <div class="container-fluid header-wrap">
-                <!-- primary public menu -->
+                <!-- header menu -->
             <nav class="row navbar navbar-expand-xl p-0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            
+
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'header',

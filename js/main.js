@@ -13,10 +13,18 @@ jQuery(function ($) {
     $('#nav-appointment-tab').addClass('active');
   });
   
+  // click your-idea and go to tab and show
+  $('#go-idea').on('click', function (){
+    $('.nav-link').removeClass('active'); // remove all from tabs name
+    $('.tab-pane').removeClass('show active'); // romove all from sections
+    $('#nav-idea-tab').addClass('active'); // only addclass for idea tab
+    $('#nav-idea').addClass('show active'); // only addclass for idea section
+  });
+  
 });
 
 // sticky menu
-window.onscroll = function() {stickyMenu()};
+window.onscroll = function() { stickyMenu() };
 
 var header = document.getElementById("masthead");
 var sticky = header.offsetTop;
