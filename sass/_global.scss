@@ -20,7 +20,7 @@ h4 {
   font-weight: 400;
 }
 .container {
-  width: 1400px;
+  max-width: 1400px;
 }
 .navbar-brand img {
   max-width: 150px;
@@ -42,7 +42,7 @@ nav ul  li {
 .navbar-static-top {
   background-color: #fff;
 }
-ul#menu-public-primary-menu {
+ul.public-primary-menu {
   li a {
     &:hover {
       color: $happy-red;
@@ -71,9 +71,12 @@ ul#menu-public-primary-menu {
         color: $happy-red;
         text-decoration: none;
         cursor: pointer;
-      }
+      }      
     }
-  }
+    .active {
+      color: $happy-red;
+    }
+  }  
 }
 .sticky {
   position: fixed;
@@ -92,6 +95,10 @@ ul#menu-public-primary-menu {
       color: rgba(255, 88, 36, 0.7);
     }
   }
+}
+/** burger menu 1199 breakpoint **/
+.navbar-toggler {
+  background-color: $happy-yellow;
 }
 
 .site-footer {
@@ -127,7 +134,7 @@ ul#menu-public-primary-menu {
       img.footer-logo {
         float: right;
         width: 172px;
-        height: 52px;
+        height: auto;
         &:hover {
           opacity: 0.8;
         }
@@ -171,4 +178,18 @@ ul#menu-public-primary-menu {
 /** Packages page **/
 .page-template-tpl_package .section-block {
   padding: 3rem 0 4rem;
+}
+.eapps-pricing-table-column-features-item-text {
+  margin: auto;
+  a {
+    color: yellow;
+    background-color: $happy-black;
+    padding: 8px 16px;
+    margin: auto;
+    font-size: 18px;
+    text-decoration: none;
+    &:hover {
+      background-color: #474747;
+    }
+  }
 }

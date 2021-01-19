@@ -46,17 +46,17 @@
                     <?php endif; ?>
 
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-public-primary-menu" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse justify-content-center">
-			      	<ul id="menu-public-primary-menu" class="nav navbar-nav navbar-right">
+                <div id="menu-public-primary-menu" class="collapse navbar-collapse justify-content-center">
+			      	<ul class="nav navbar-nav navbar-right public-primary-menu">
 
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
-                'container'       => 'false',                
+                'container'       => 'false',
                 'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker(),
@@ -68,14 +68,14 @@
                         $classes = get_body_class();
                         if (in_array('logged-in',$classes)) {
                     ?>
-                        <a href="/happy/my-account">Profile</a>
+                        <a class="menu-my-account" href="/happy/my-account">My Account</a>
                         <span> | </span>
-                        <a class="logout" data-toggle="modal" data-target="#happyModallogout">Log out</a>
+                        <a class="menu-logout" data-toggle="modal" data-target="#happyModallogout">Log out</a>
                     
                     <?php } else { ?>
-                        <a class="login" data-toggle="modal" data-target="#happyModallogin">Log in</a>
+                        <a class="menu-login" data-toggle="modal" data-target="#happyModallogin">Log in</a>
                         <span> | </span>
-                        <a class="register" data-toggle="modal" data-target="#happyModalregister">Register</a>
+                        <a class="menu-register" data-toggle="modal" data-target="#happyModalregister">Register</a>
                     <?php } ?>
                 </li>
             </nav>            

@@ -9,7 +9,7 @@
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade appointment-wrap show active" id="nav-appointment" role="tabpanel" aria-labelledby="nav-appointment-tab">
-    <?php echo do_shortcode('[ea_bootstrap width="100%" scroll_off="true" layout_cols="2"]'); ?>    
+    <?php echo do_shortcode('[ea_bootstrap width="100%" scroll_off="true" layout_cols="1"]'); ?>    
   </div>
 
   <div class="tab-pane fade" id="nav-idea" role="tabpanel" aria-labelledby="nav-idea-tab">

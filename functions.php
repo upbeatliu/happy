@@ -348,7 +348,7 @@ function woo_new_product_tab_content() {
 }
 
 /**
- * ACF
+ * ACF display input fields at front-end for dashboard page
  */
 add_action( 'admin_post_adaptiveweb_save_profile_form', 'adaptiveweb_save_profile_form' );
 function adaptiveweb_save_profile_form() {
@@ -359,3 +359,8 @@ function adaptiveweb_save_profile_form() {
   wp_redirect(add_query_arg('updated', 'success', wp_get_referer()));
   exit;
 }
+
+/**
+ * check if a user has purchased specific products
+ * https://stackoverflow.com/questions/38769888/check-if-a-user-has-purchased-specific-products-in-woocommerce
+ */

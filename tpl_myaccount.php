@@ -2,7 +2,7 @@
 /**
  * Template Name: My Account
  *
- * @package happy
+ * @package happy 2 help you
  */
 ?>
 <?php get_header(); ?>

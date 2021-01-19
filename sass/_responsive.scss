@@ -1,0 +1,162 @@
+@media only screen and (max-width: 1199px) {
+  .header-wrap { // 2nd burger menu
+    display: none;
+  }
+  /** primary-menu and 2nd head-menu **/
+  #menu-public-primary-menu {
+    text-align: center;
+    ul {
+      li {
+        border-bottom: 1px solid $happy-yellow;        
+        &:active, &:hover {
+          background-color: rgba(247, 248, 89, 0.4);
+        }
+      }
+      .menu-item-94 a {
+        margin: 6px auto;
+      }
+    }
+    ul.public-primary-menu li{
+      &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 10px;
+      }
+    }   
+  }
+  .home #page-sub-header .hero-text-wrap {
+    margin-top: 0;
+  }
+  .home .section-block h4 {
+    width: 60vw;
+  }
+  /** plan **/
+  .plans .woocommerce.columns-3 ul.products li.product {
+    width: 47%;    
+    &:nth-of-type(2n) {
+      margin: 0 0 2rem;
+    }
+    &:nth-of-type(3n) {
+      margin: 0 1rem 3rem 0;
+    }
+    &:last-of-type {
+      margin: 0 0 2rem;
+    }
+  }
+}
+@media only screen and (max-width: 991px) { 
+  .home #page-sub-header {
+    min-height: 330px;
+    .hero-text-wrap h1 {
+      width: 90vw;
+    }
+  }
+  .home .section-block h4 {
+    width: 90vw;
+  }
+  .how .steps-wrap .step-wrap p {
+    display: none;
+  }
+  .how .steps-wrap .step-wrap {
+    padding-right: 17px;
+    .block-arrow {
+      background-image: none;
+      width: 96px;
+      height: 158px;
+      i.fas {
+        font-size: 4rem;
+      }
+    }
+    .title {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto 10px;
+    }
+  }
+  .latest .card-single {
+    width: 47.5%;
+    margin-bottom: 16px;
+    &:nth-of-type(2n){
+      margin-right: 0;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .home .section-block {
+    padding: 1rem 0 12px;
+  }
+  .site-footer {
+    padding: 0;
+    .footer-container {
+      flex-flow: row wrap;    
+      text-align: center;
+      .footer-wrap {
+        width: 100%;
+        img.footer-logo {
+          width: 100px;
+        }
+      }
+      .copyright {
+        margin-top: 0;
+      }
+      .brand {
+        width: min-content;
+        margin: 12px auto 0;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .how .steps-wrap .step-wrap {
+    width: 100%;
+    position: relative;
+    .number {
+      left: 26vw;
+    }
+    .block-arrow {
+      width: 83px;
+      height: 130px;
+      margin: auto;
+    }
+  }
+  .home #page-sub-header {
+    min-height: 224px;
+    .hero-text-wrap h1 {
+      font-size: 28px;
+    }
+  }
+  .home .section-block h4 {
+    font-size: 20px;
+    margin: 1.5rem auto;
+  }
+  .plans .woocommerce.columns-3 ul.products li.product {
+    width: 100%;
+    margin: 0 0 3rem 0;
+    text-align: center;
+    &:nth-of-type(3n) {
+      margin: 0 0 3rem 0;
+    }
+    a.button {
+      width: 52%;      
+      margin: 4px auto 0 auto;
+    }
+  }
+  .latest .card-single {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    .card-body .read-more {
+      width: 52%;
+      margin: auto;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  /** eash appoint form **/
+  .ea-actions-group {
+    display: flex;
+    flex-flow: row wrap;
+    .ea-btn {
+      margin-top: 12px;
+    }
+  }
+}

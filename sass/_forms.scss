@@ -3,7 +3,12 @@
   flex-flow: row wrap;
   justify-content: space-around;
   .form-control{
-    border-radius: 0;
+		border-radius: 0;
+		&:focus {	
+			border-color: $happy-yellow;		
+			box-shadow: none;
+			outline: none;
+		}
   }
   input, select, textarea {
     margin: 20px auto;
@@ -53,12 +58,25 @@
       border-color: $happy-yellow;
       border-radius: 0;
     }
-  }
+	}
+	a.post-link {
+		color: $happy-yellow;
+		text-decoration: none;
+		&:hover {
+			color: $happy-red;
+		}
+	}
 }
 
 /**
 * Easy Appointment
 */
+.ea-bootstrap .time-row .time a {
+	color: $happy-yellow;
+	&:hover {
+		color: $happy-red;
+	}	
+}
 .ea-bootstrap {  
   .btn-primary, .btn-default {      
     padding: 8px 5rem !important;
@@ -258,3 +276,37 @@
 .logout-body .wppb-logout-url {
 
 }
+
+/** Consultancy booking page ***/
+.postid-24 {
+	.wc-bookings-booking-form {
+		width: 73%;
+	}	
+}
+.woocommerce div.product form.cart .button {
+	background-color: rgba(163,163,117,0.5);
+}
+.wc-bookings-date-picker .ui-datepicker td.bookable a {
+	background-color: rgba(247, 248, 89, 0.7) !important;
+	color: #ccc !important;
+  text-shadow: none;
+}
+.wc-bookings-date-picker .ui-datepicker td.ui-datepicker-current-day a,
+.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
+	background: $happy-yellow !important;
+	color: #666 !important;
+	text-shadow: none;
+}
+.wc-bookings-booking-form .block-picker li a.selected {
+	background: $happy-yellow !important;
+}
+.wc-bookings-booking-form .block-picker li:nth-child(odd) a,
+.wc-bookings-booking-form .block-picker li:nth-child(even) a {
+	&:hover {
+		background: $happy-yellow;
+	}
+	&:focus {
+		background: $happy-yellow;
+	}
+}
+

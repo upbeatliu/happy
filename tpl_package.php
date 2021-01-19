@@ -2,7 +2,7 @@
 /**
  * Template Name: Packages
  *
- * @package happy
+ * @package happy 2 help you
  */
 ?>
 
