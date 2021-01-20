@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-thumbnail">
 		<?php the_post_thumbnail(); ?>
 	</div>
@@ -46,4 +46,4 @@
 	<footer class="entry-footer">
 		<?php wp_bootstrap_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</div><!-- #post-## -->

@@ -1,0 +1,114 @@
+.page-template-tpl_blog {
+  .widget_categories {
+    display: none;
+  }
+  #secondary .eapps-pricing-table-columns-container {
+    margin: 0 auto;
+  }
+  .btn-primary {
+    background-color: $happy-yellow;
+    border-color: transparent;
+    color: #fff;
+    &:hover, &:active {
+      color: $happy-red !important;
+      background-color: $happy-yellow !important;
+      border-color: transparent !important;
+    }    
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .page-wrap {
+    margin-top: 4rem;
+  }
+  .list-group {
+    border-radius: 0;
+  }
+  .list-group-item {
+    padding: 0;
+  }
+  .card-header {
+    width: 100%;
+    padding: 0;    
+    .header-link {
+      align-items: center;
+      .btn-link {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-decoration: none;
+        .label-area {
+          -webkit-border-radius: 5px;
+          -webkit-border-bottom-right-radius: 5rem;
+          -moz-border-radius: 5px;
+          -moz-border-radius-bottomright: 5rem;
+          border-radius: 5px;
+          border-bottom-right-radius: 5rem;
+          h3 {
+            padding: 5px 1.8rem 5px 1rem;
+            color: #fff;
+            margin-bottom: 0;
+            text-decoration: none;
+            span {
+              background-color: $happy-yellow;
+              color: $happy-black;
+            }
+          }
+        }
+      }
+      .btn:focus {
+        box-shadow: none;
+      }
+      i {
+        font-size: 32px;
+        color: $happy-black;
+        padding: 0 0.4rem 0 0;
+      }
+    }
+  }
+  .img-div {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 185px;
+    width: 100%;
+  }
+  /** .card-body ***/
+  .accordion-ul {
+    list-style: none;
+    padding: 0;    
+    li {
+      display: none;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      a {
+        text-decoration: none;
+      }
+      h5 {
+        color: $happy-yellow;
+        font-size: 1.15rem;        
+        &:hover {
+          color: $happy-red;
+        }
+      }
+      p {
+        color: $happy-h2-title;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+    .loadMore,
+    .showLess {
+      // color: $happy-yellow;
+      cursor: pointer;
+      &:hover {
+        color: $happy-red;
+      }
+    }
+    .showLess {
+      display: none;
+    }
+  }
+}

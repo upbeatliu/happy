@@ -8,28 +8,38 @@
  */
 
 get_header(); ?>
+<!-- hero banner -->
+<div class="hero-thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+	<div class="row justify-content-center">
+			<a href="#article" class="page-scroller"><i class="fas fa-chevron-circle-down"></i></a> 
+	</div>
+</div> <!-- end of hero banner -->
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
-		<div id="main" class="site-main" role="main">
+<div id="article" class="container section-block">
 
-		<?php
-		while ( have_posts() ) : the_post();
+	<div class="row">
+		<section class="content-area col-sm-12 col-lg-8">
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			<?php
+				while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', get_post_format() );
+			?>
+			
+			<?php
+				the_post_navigation();
 
-			    the_post_navigation();
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+			?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</div><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+			<!-- related articles -->
+			<?php get_template_part( 'template-parts/content', 'related' ); ?>
+			<?php endwhile; // End of the loop. ?>
+		</section>
+			
+	<?php get_sidebar(); ?>
+	</div> <!-- end row -->
+</div> <!-- end of container -->
+<?php get_footer(); ?>

@@ -7,7 +7,7 @@ h6, p, a {
   font-family: 'Roboto', sans-serif;
 }
 h1 {
-  font-weight: 500;
+  font-weight: 500;  
 }
 h2 {
   font-weight: 700;
@@ -191,5 +191,13 @@ ul.public-primary-menu {
     &:hover {
       background-color: #474747;
     }
+  }
+}
+.eapps-pricing-table-column-features-item-inner a.pricing-more {
+  color: rgba(255, 88,36, 0.65);
+  background-color: transparent;
+  font-size: 12px;
+  &:hover {
+    color: $happy-red;
   }
 }

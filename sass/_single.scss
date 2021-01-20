@@ -1,0 +1,163 @@
+.single {
+  .post {
+    margin: 0 12px;
+    img {
+      width: 100%;
+      height: auto;
+    }    
+  }  
+  .hero-thumbnail {
+    overflow: hidden;
+    width: 97vw;
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto 30px;
+    position: relative;
+    .page-scroller {
+      position: absolute;
+      bottom: 1.8rem;
+    }
+    .fa-chevron-circle-down:before {
+      font-size: 48px;
+      color: rgba(255, 88,36, 0.65);      
+    }
+  }
+  .post-thumbnail {
+    display: none;
+  }  
+  .section-block {
+    padding: 3rem 0 4rem;
+    h1 {
+      color: $happy-h2-title;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2.2rem;
+    }
+    a {
+      color: $happy-yellow;
+      text-decoration: none;
+      &:hover {
+        color: $happy-red;
+      }
+    }
+    .entry-meta {
+      margin-bottom: 2.2rem;
+    }
+  }
+}
+
+/** post navigation from single and archive **/
+.nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 2rem auto;
+  .nav-previous, .nav-next {
+    background-color: $happy-yellow;
+    width: fit-content;
+    display: inline;
+    padding: 0.5rem 0.4rem;    
+    a {
+      color: #fff;
+      font-family: "Font Awesome 5 Free";
+    }
+  }
+  .nav-previous a {
+    &:before {
+      content: "\f359";
+      margin-right: 5px;
+    }
+  }
+  .nav-next a {
+    &:after {
+      content: "\f35a";
+      margin-left: 5px;
+    }
+  }
+}
+
+/** related Articles from single page **/
+.related {
+  border-top: 1px solid $happy-yellow;
+  margin-top: 32px;
+  padding-top: 3rem;
+  h3 {
+    text-align: center;
+    color: $happy-h2-title;
+  }
+  .section-wrap {
+    margin-top: 12px;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between;
+    .article-card {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 2rem;
+      img {
+        border: 5px solid #e6e6e6;
+      }
+      h4 {
+        margin: 8px auto;
+        width: 80%;
+        color: $happy-yellow;
+        font-size: 18px;
+        &:hover {
+          color: $happy-red;
+        }
+      }
+      p {
+        color: $happy-black;
+        width: 80%;
+        margin: auto;        
+      }
+    }
+  }
+}
+
+/** sidebar **/
+#secondary {
+  h3.widget-title {
+    color: $happy-h2-title;    
+  }
+  .widget_categories {
+    ul li {
+      width: max-content;
+      background-color: rgba(247, 248, 89, 0.45);
+      border-bottom: 5px solid #fff;
+      a {
+        color: $happy-h2-title;
+        &:hover {
+          color: $happy-red;
+        }
+      }
+    }
+  }
+  .eapps-pricing-table-columns-container {
+    position: relative;
+    margin: 68px auto 0;
+    &:before {
+      position: absolute;
+      top:-41px;
+      left:0;
+      z-index: 1;
+      content: 'Packages';
+      font-size: 1.75rem;
+      color: $happy-h2-title;    
+      font-weight: 500;
+    }    
+  }
+  .elfsight-widget-pricing-table .eapps-pricing-table-column .eapps-pricing-table-column-inner .eapps-pricing-table-column-title-container {
+    padding: 12px 8px;
+  } 
+  .eapps-pricing-table-column-item {
+    margin: 12px 0;
+  }
+  #eapps-pricing-table-1 .eapps-pricing-table-column-1 .eapps-pricing-table-column-features-item:first-of-type,
+  #eapps-pricing-table-1 .eapps-pricing-table-column-2 .eapps-pricing-table-column-features-item:first-of-type,
+  #eapps-pricing-table-1 .eapps-pricing-table-column-3 .eapps-pricing-table-column-features-item:first-of-type {
+    margin: 20px 0;
+  } 
+}

@@ -29,6 +29,52 @@ jQuery(function ($) {
     $('#nav-idea').addClass('show active'); // only addclass for idea section
   });
   
+  // add class to first card-body at accordion from Articles page
+  $("#accordion .card:first .collapse").addClass("show");
+
+  // load more click on Articles page
+  // loop each list-group-item to find their index and identify ul id
+  $(".list-group-item").each(function (i) {
+    $("#listCat" + i + " li.card")
+      .slice(0, 3)
+      .show();
+    $("#loadMore" + i).on("click", function (e) {
+      e.preventDefault();
+
+      $("#listCat" + i + " li.card:hidden")
+        .slice(0, 3)
+        .slideDown();
+      // if no more hidden item, hide loadMore btn
+      if ($("#listCat" + i + " li.card:hidden").length == 0) {
+        $("#loadMore" + i).fadeOut("slow");
+      }
+      // if visible items more than 3, show showLess btn else hide it
+      if ($("#listCat" + i + " li.card:visible").length > 3) {
+        $("#showLess" + i)
+          .fadeIn("slow")
+          .show();
+      } else {
+        $("#showLess" + i)
+          .fadeOut("slow")
+          .hide();
+      }
+    });
+
+    // showLess btn: show 3 items, show loadMore btn and hide showLess btn
+    $("#showLess" + i).on("click", function (e) {
+      e.preventDefault();
+
+      $("#listCat" + i + " li.card")
+        .not(":lt(3)")
+        .hide()
+        .slideUp();
+      $("#showLess" + i)
+        .fadeOut("slow")
+        .hide();
+      $("#loadMore" + i).show();
+    });
+  });
+  
 });
 
 // sticky menu

@@ -79,6 +79,21 @@
       margin-right: 0;
     }
   }
+  /** single **/
+  .single .hero-thumbnail {
+    height: 330px;
+  }
+  /** sidebar **/
+  .widget_categories {
+    text-align: center;
+    ul {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+  #secondary .eapps-pricing-table-columns-container:before {
+    left: 43%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .home .section-block {
@@ -103,6 +118,9 @@
         margin: 12px auto 0;
       }
     }
+  }
+  #secondary .eapps-pricing-table-columns-container:before {
+    left: 39%;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -149,6 +167,13 @@
       margin: auto;
     }
   }
+  /** single **/
+  .single .hero-thumbnail {
+    height: 224px;
+  }
+  .related .section-wrap .article-card {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
   /** eash appoint form **/
@@ -158,5 +183,8 @@
     .ea-btn {
       margin-top: 12px;
     }
+  }
+  #secondary .eapps-pricing-table-columns-container:before {
+    left: 36%;
   }
 }
