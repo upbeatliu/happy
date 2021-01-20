@@ -30,10 +30,10 @@
         ?>
         <div class="card list-group-item d-flex justify-content-between align-items-center">
           <div class="card-header" id="heading<?php echo $slug; ?>">
-            <div class="mb-0 d-flex justify-content-between header-link">
+            <div class="mb-0 d-flex justify-content-between header-link" style="background:<?php echo $cat_color; ?>">
               <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<?php echo $slug; ?>" aria-expanded="true" aria-controls="collapse<?php echo $slug; ?>">
                 
-                <div class="label-area" style="background:<?php echo $cat_color; ?>">
+                <div class="label-area">
                   <h3><?php echo $name; ?>&#32;<span class="badge badge-primary badge-pill"><?php echo $count; ?></span>
                   </h3>
                 </div>     

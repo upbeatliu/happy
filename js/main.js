@@ -11,8 +11,8 @@ jQuery(function ($) {
   if ( window.location.pathname == '/happy/' ){
     // Index (home) page
     $('.menu-item-164').removeClass('active');
-    $('#menu-item-97').removeClass('active');
-    $('#menu-item-99').removeClass('active');
+    $('#menu-item-97').removeClass('active');  //How
+    $('#menu-item-99').removeClass('active');  // Plans
   }
   // when on MY ACCOUNT page add active class
   if ( window.location.pathname == '/happy/my-account/' ){

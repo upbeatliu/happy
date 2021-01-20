@@ -95,6 +95,16 @@ ul.public-primary-menu {
       color: rgba(255, 88, 36, 0.7);
     }
   }
+  li.current-menu-item {
+    &:nth-of-type(2), &:first-of-type {
+      a {
+        color: $happy-black;
+      }
+    }
+    a {
+      color: $happy-red;
+    }
+  }
 }
 /** burger menu 1199 breakpoint **/
 .navbar-toggler {
