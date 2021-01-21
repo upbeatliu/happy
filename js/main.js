@@ -75,6 +75,9 @@ jQuery(function ($) {
     });
   });
   
+  // dashboard warm alert fade out in 5 sec 
+  $('#dashboard-alert').delay(5000).fadeOut('slow');
+
 });
 
 // sticky menu

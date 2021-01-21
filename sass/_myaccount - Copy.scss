@@ -53,24 +53,6 @@
         }
       }
     }
-    /** .acf-project-review **/
-    .acf-project-review {
-      h5 {
-        text-align: center;
-        span {
-          font-size: 16px;
-        }
-      }
-      .review-wrap {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        .run-wrap {
-          width: 46%;
-        }
-      }
-    }
-
     /** Dashboard & Business Info **/
     .dashboard-wrap {
       position: relative;
@@ -80,25 +62,17 @@
         margin-left: 0;
       }
       .row1 {
-        .col-head {
+        .col {
           background-color: rgba(247,248,89,.2);
           border: 1px solid #f7e459;
-          padding: 6px;
-          width: 16.6%;        
-        }
-        .col-half {
-          width: 16%;
-          &:nth-of-type(2n) {
-            width: 34%;
-          }
+          padding: 6px;        
         }
         .col03 { flex-grow:1; } 
       }
       .row2 .updated {
         position: absolute;
         top: -56px;
-        left: 12vw;
-        width: 68%;
+        width: 100%;
         padding: 10px;
         text-align: center;
         border-top: 1px solid $happy-yellow;
@@ -119,56 +93,19 @@
         }
       }
     }
-    .admin-col {
-      width: 16%;      
-      padding: 8px 8px 8px 8px;
-      border: 1px solid $happy-yellow;          
-      &:nth-of-type(2n) {
-        width: 34%;            
-      }
-    }
-    #acf-run1-review, #acf-run2-review {
-      position: relative;
-      display: flex;
-      width: 100%;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      .acf-fields {
-        position: absolute;
-        top: -42px;
-        left: -1px;
-        display: flex;
-        width: 100%;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        .acf-input {
-          width: 16%;
-          margin-bottom: 10px;
-          padding: 8px 8px 0 8px;
-          border: 1px solid $happy-yellow;          
-          &:nth-of-type(2n) {
-            width: 34%;            
-          } 
-          &:last-of-type { // using td mode of field_el error to show email field
-            display: none;
-          }         
-        }        
-      }
-    } 
     #acf-my-account, #acf-my-business {
       display: flex;
-      width: 100%;
-      flex-flow: row wrap;
-      justify-content: space-between;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
      .acf-fields {
       display: flex;
       width: 100%;
       flex-flow: row wrap;
       justify-content: space-between;
-        .acf-input { 
-          width: 16.6%;       
+        .acf-input {        
+          // padding: 10px 4px 10px 3px;        
           margin-bottom: 10px;
-          padding: 8px 8px 0 8px;
           border-left: 1px solid $happy-yellow;
           border-bottom: 1px solid $happy-yellow;
           &:nth-of-type(6) {
@@ -196,16 +133,12 @@
           }
         }
       }
-    } // end of ids    
-     
+    } // ids
     #acf-my-business .acf-fields .acf-input {
       &:nth-of-type(5){
         padding-right: 2px;
       }
     }
-    /*** 4 forms here but only show run1-wrap updated message when any form updated **/
-    .run2-wrap .row2 .updated,
-    .acf-my-account .row2 .updated,
     .acf-my-business .row2 .updated {
       display: none;
     }
