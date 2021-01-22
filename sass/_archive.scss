@@ -1,0 +1,68 @@
+.archive {
+  .page-header {
+    margin: 3rem 0;
+    position: relative;
+    border-top: 1px solid $happy-yellow;
+    border-bottom: 1px solid $happy-yellow;
+    height: 7rem;
+    .title-wrap {
+      position: absolute;
+      top: -25px;
+      z-index: 9;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .circle-wrap {
+        display: inline-block;
+        background-color: #fff;
+        padding-bottom: 18px;
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  .articles-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .card-single {
+      width: 48%;
+      text-align: center;
+      margin-top: 15px;
+      border-color: $happy-yellow;
+      .card-img .img-div {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 185px;
+        width: 100%;
+      }
+      .card-body {
+        h4 a {
+          color: $happy-yellow;
+          text-decoration: none;
+          &:hover {
+            color: $happy-red;
+          }
+        }
+      }
+      .read-more {        
+        background-color: #f7e459;
+        border-color: transparent; 
+        width: 80%;   
+        margin-top: 4px;
+        &:hover {
+          color: $happy-red;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

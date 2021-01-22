@@ -53,7 +53,7 @@ The screen width of the dashboard page is less than 1200, sorry for the inconven
 	$run2_check_time = get_field('run2_checking_time', 'user_'.$user->ID);	
 ?>
 <div class="dashboard-wrap acf-project-review">
-	<h3>Review Times</h3>
+	<h3>Project review times</h3>
 	
 	<h5>Project Name: <?php echo $project_name;?> <span class="start">started at 
 	<?php if($start) { echo $start; } else { echo "dd/mm/yyyy hh:ss pm"; } ?></span></h5>
@@ -92,7 +92,7 @@ The screen width of the dashboard page is less than 1200, sorry for the inconven
 			?>
 			<div class="row row2">
 				<div class="admin-col col01">
-					<?php if ($run1_check) { echo "Ready";		
+					<?php if ($run1_check) { echo "<div style='color: #ff5824;'>Ready</div>";		
 					} else {
 						echo "Not Ready";
 					}?>
@@ -138,7 +138,7 @@ The screen width of the dashboard page is less than 1200, sorry for the inconven
 			?>
 			<div class="row row2">
 				<div class="admin-col col01">
-					<?php if ($run2_check) { echo "Ready";		
+					<?php if ($run2_check) { echo "<div style='color: #ff5824;'>Ready</div>";		
 					} else {
 						echo "Not Ready";
 					}?>
@@ -151,6 +151,9 @@ The screen width of the dashboard page is less than 1200, sorry for the inconven
 			</div>
 		</div> <!-- end of run 2 run-wrap -->
 
+		<div class="buy-more">
+			If you will need extra more modification or new requirements after confirmation have done, you can <a href="/plan/development-server-setting/">buy more development hour</a> at any time.
+		</div>
 	</div>	
 </div> <!-- dashborad-wrap -->
 

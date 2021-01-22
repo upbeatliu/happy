@@ -47,11 +47,14 @@ ul.public-primary-menu {
     &:hover {
       color: $happy-red;
     }
+  }
+  #menu-item-93 { // Leave Review
+    display:none;
   } 
   // Google Reviews image
   #menu-item-94 a {  
     background:url('./images/google-reviews.png') 0 0 no-repeat;
-    display:block;
+    display:none;
     margin-top: 6px;
     height:25px;
     text-indent:-99999em;

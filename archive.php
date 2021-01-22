@@ -9,43 +9,72 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
-		<div id="main" class="site-main" role="main">
+<div id="article" class="container section-block">
 
-		<?php
-		if ( have_posts() ) : ?>
+<div class="row">
+	<section class="content-area col-sm-12 col-lg-8">
+
+	<?php
+			if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
+				$archive_title = get_the_archive_title();
+				// categories					
+				$term = get_queried_object();				
+				$cat_color = get_field('color',  $term );						
 				?>
+				<div class="title-wrap">
+
+				<?php	// category icon and title	?>
+				<div class="circle-wrap">										
+					<h1 id="archive-title" style="color:<?php echo $cat_color; ?>">				
+						<?php echo $archive_title; ?>
+					</h1>
+				</div>
+				
+				</div> <!-- end of title-wrap -->					
 			</header><!-- .page-header -->
-
+				<div class="row articles-wrap">
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
+				?>
+					<div id="post-<?php the_ID(); ?>" class="card card-single">
+                       
+						<div class="card-img"> 
+							<!-- <?php //the_post_thumbnail('medium', array('class' => 'thumbnail-img')); ?> -->
+							<div class="img-div" style="background-image:url('<?php the_post_thumbnail_url('medium'); ?>')"></div>
+						</div>
+						<div class="card-body">                
+							<h4 class="card-title">
+								<a class="title-link" href="<?php echo get_permalink(); ?>">
+									<?php echo get_the_title(); ?>
+								</a>
+							</h4>
+							<!--this is the exerpt of the post-->
+							<p class="card-text"><?php $content = get_the_content(); echo wp_trim_words($content,'32','...'); ?></p>
+							<a class="btn btn-primary read-more" href="<?php echo get_permalink(); ?>">Read More</a>
+						</div>
+             
+					</div>
+			<?php	
+				endwhile;
+			?>
+				</div> <!-- end of articles-wrap -->
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				the_posts_navigation();
 
-			endwhile;
+			else :
 
-			the_posts_navigation();
+				get_template_part( 'template-parts/content', 'none' );
 
-		else :
+			endif; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</div><!-- #main -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+		</section>
+			
+		<?php get_sidebar(); ?>
+	</div> <!-- end row -->
+</div> <!-- end of container -->
+<?php get_footer(); ?>

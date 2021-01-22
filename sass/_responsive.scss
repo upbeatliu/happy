@@ -121,7 +121,7 @@
   }
   #secondary .eapps-pricing-table-columns-container:before {
     left: 39%;
-  }
+  }  
 }
 @media only screen and (max-width: 575px) {
   .how .steps-wrap .step-wrap {
@@ -173,6 +173,12 @@
   }
   .related .section-wrap .article-card {
     width: 100%;
+  }
+  .not-found .help-intro {
+    width: 100%;
+  }
+  .archive .articles-wrap .card-single {
+    width: 98%;
   }
 }
 @media only screen and (max-width: 480px) {
