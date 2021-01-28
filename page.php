@@ -14,8 +14,10 @@
 acf_form_head(); 
 get_header(); ?>
 
-<div class="container woocom-section-block">
-	<div id="main" class="site-main" role="main">
+<div class="container page-wrap">
+
+	<div class="row">
+		<section class="content-area section-block col-sm-12 col-lg-8">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -30,9 +32,9 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-	</div><!-- #main -->
-</div><!-- container -->
-
-<?php
-get_sidebar();
-get_footer();
+		</section>
+			
+	<?php get_sidebar(); ?>
+	</div> <!-- end row -->
+</div> <!-- end of container -->
+<?php get_footer(); ?>

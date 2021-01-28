@@ -214,3 +214,12 @@ ul.public-primary-menu {
     color: $happy-red;
   }
 }
+
+/** Packages **/
+.eui-tooltip-content-inner a {
+  color: $happy-yellow;
+  text-decoration: none;
+  &:hover {
+    color: $happy-red;
+  }
+}
