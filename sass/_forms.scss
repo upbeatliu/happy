@@ -1,3 +1,14 @@
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: $happy-yellow;
+	border-radius: 5px;
+	padding-top: 9px;
+	background-color: rgba(247,248,89, 0.25);
+}
+.wpcf7 form.invalid .wpcf7-response-output {
+	border-radius: 5px;
+	padding-top: 9px;
+	background-color: rgba(255,88,36,0.25);
+}
 .wpcf7-form {
   display: flex;
   flex-flow: row wrap;
@@ -65,6 +76,9 @@
 		&:hover {
 			color: $happy-red;
 		}
+	}
+	.g-recaptcha {
+		border: none;
 	}
 }
 

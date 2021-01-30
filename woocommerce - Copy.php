@@ -13,9 +13,15 @@
  */
 
 get_header(); ?>
-<div class="container woocom-section-block">
-    <div class="row"> 
-        <?php woocommerce_content(); ?>
-    </div> 
-</div>
-<?php get_footer(); ?>
+    <div class="container woocom-section-block">
+        
+        <div id="main" class="site-main" role="main">
+
+            <?php woocommerce_content(); ?>
+
+        </div><!-- #main -->
+        
+    </div>
+<?php
+get_sidebar();
+get_footer();

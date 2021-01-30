@@ -30,7 +30,7 @@
             $title = get_sub_field('title');
             $description = get_sub_field('description');          
       ?>
-        <div class="step-wrap">
+        <div class="step-wrap-inner">
           <h3 class="number"><?php echo $x; ?></h3>
           <div class="block-arrow"><i class="fas <?php echo $icon; ?>"></i></div>
           <h3 class="title"><?php echo $title; ?></h3>

@@ -48,7 +48,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     position: relative;
-    .step-wrap {
+    .step-wrap-inner {
       width: 20%;
       padding-right: 30px;
       &:last-of-type{
@@ -87,6 +87,13 @@
         background-color: #f7f7f7;
         padding: 8px 16px;
         border-radius: 5px;
+        a {
+          color: $happy-red;
+          text-decoration: none;
+          &:hover {
+            color: $happy-yellow;
+          }
+        }
       }  
     }
   }

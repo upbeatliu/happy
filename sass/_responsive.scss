@@ -94,6 +94,20 @@
   #secondary .eapps-pricing-table-columns-container:before {
     left: 43%;
   }
+  /** woocommerce **/
+  .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    width: 40%;
+    margin: 2rem auto;
+    float: none;
+  }
+  .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    width: 98%;
+    margin: auto;
+    float: none;
+  }
+  .woocommerce .woocommerce-product-details__short-description table {
+    height: auto !important;
+  }
 }
 @media only screen and (max-width: 767px) {
   .home .section-block {
@@ -121,7 +135,21 @@
   }
   #secondary .eapps-pricing-table-columns-container:before {
     left: 39%;
-  }  
+  }
+  .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    width: 80%;
+  }
+  .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    h1.product_title {
+      width: 100%;
+      font-size: 28px;
+      text-align: center;
+    }
+    p.price {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }
 @media only screen and (max-width: 575px) {
   .how .steps-wrap .step-wrap {

@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta name="google-site-verification" content="mc_sXzXEl_AaIz0k7rrw10oWKVJDspp6o-Snqt1xQGs" />
 <?php wp_head(); ?>
 </head>
 

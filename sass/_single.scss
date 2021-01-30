@@ -156,6 +156,9 @@
 
 /** sidebar **/
 #secondary {
+  .widget_categories {
+    margin-left: 3vw;
+  }
   h3.widget-title {
     color: $happy-h2-title;    
   }
@@ -178,7 +181,7 @@
     &:before {
       position: absolute;
       top:-41px;
-      left:0;
+      left:3vw;
       z-index: 1;
       content: 'Packages';
       font-size: 1.75rem;
